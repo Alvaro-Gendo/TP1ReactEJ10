@@ -1,16 +1,15 @@
-import { Button, Card, Col, Row } from "react-bootstrap";
+import { Button, Card, Col} from "react-bootstrap";
 
 const ItemPelicula = (props) => {
   return (
-    <Row>
       <Col sm={12} md={4} lg={3}>
         <Card className="m-1">
           <Card.Title className="text-center">
-            {props.nombrePelicula}
+            {props.nombre}
           </Card.Title>
           <Card.Body>
             <p>Descripción:{props.descripcion}</p>
-            <Card.Text>Género:</Card.Text>
+            <Card.Text>Género:{props.genero}</Card.Text>
             <Button
               variant="danger"
               onClick={() => props.borrarPeli(props.nombrePelicula)}
@@ -20,7 +19,6 @@ const ItemPelicula = (props) => {
           </Card.Body>
         </Card>
       </Col>
-    </Row>
   );
 };
 
